@@ -46,6 +46,7 @@
 // without removing it. All three functions push, pop, and min should operate in
 // O(1) time.
 
+
 class Node {
   constructor(val) {
     this.value = val;

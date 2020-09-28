@@ -46,23 +46,72 @@
 // without removing it. All three functions push, pop, and min should operate in
 // O(1) time.
 
-//
-// .What are we coding?
-// Are there any constraints on the input/output?
-// What edge cases can we expect?
-// .
+class Node {
+  constructor(val) {
+    this.value = val;
+    this.next = null;
+  }
+}
 
-//LIFO
-//has a top and length
-//
-.
-.
-.
-.
-.
-.
-.
-.
+class Stack {
+  constructor() {
+    this.top = null;
+    this.length = 0;
+    this.minArr = [];
+  }
+
+  push(val) {
+    let newNode = new Node(val);
+
+    if (this.length === 0) {
+      this.top = newNode;
+      this.minArr.push(newNode.value);
+    } else {
+      newNode.next = this.top;
+      this.top = newNode;
+      if (newNode.value < this.min()) {
+        this.minArr.push(newNode.value);
+      }
+    }
+    this.length++
+  }
+
+  pop() {
+    const removedTop = this.top;
+
+    if (this.length === 0) return null;
+
+    if (this.length === 1) {
+      this.top = null;
+      minArr = [];
+    } else {
+      this.top = removedTop.next;
+      if (removedTop.value === this.min()) this.minArr.pop()
+    }
+    this.length--
+    return removedTop.value;
+  }
+
+  min() {
+    return this.minArr[this.minArr.length - 1];
+  }
+}
+
+// const stack = new Stack();
+// stack.push(5)
+// stack.push(2)
+// stack.push(1)
+// stack.push(-1)
+// stack.push(7)
+// stack.pop()
+// stack.pop()
+// stack.pop()
+// stack.pop()
+
+// console.log(stack);
+// console.log('min:', stack.min());
+
+
 
 
 // PROBLEM 5 - Test a retractable ballpoint pen

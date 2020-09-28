@@ -46,7 +46,15 @@
 // without removing it. All three functions push, pop, and min should operate in
 // O(1) time.
 
+//
+// .What are we coding?
+// Are there any constraints on the input/output?
+// What edge cases can we expect?
+// .
 
+//LIFO
+//has a top and length
+//
 .
 .
 .
@@ -55,10 +63,6 @@
 .
 .
 .
-..
-.
-
-
 
 
 // PROBLEM 5 - Test a retractable ballpoint pen

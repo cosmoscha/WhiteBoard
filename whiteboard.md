@@ -74,8 +74,7 @@ constructor instance variables
 [5,4,1]
 
 ->min() {
-    this.min = [Infinity]
-    minArray = [1,2,3,4,5,6,7,8]
+    minArray = [infinity,]
 
     if this.top.value < this.min
     this.min = this.top.value
@@ -86,13 +85,12 @@ constructor instance variables
     calculate the new min value
 }
 let currentNode = this.top
-while(currentNode) {
+-if (there are no elements in the stack)
+this.min = currentNode.value
+minArray.push(currentNode.value)
 
-    if(currentNode.next.value > currentNode.value) {
-        this.min = currentNode.next.value
-    }
-    currentNode = currentNode.next
-}
+-if
+
 
 }
 
